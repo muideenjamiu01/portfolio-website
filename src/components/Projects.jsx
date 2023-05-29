@@ -1,21 +1,21 @@
 import React from "react";
-import Fade from 'react-reveal/Fade';
-import YvImg from "../assets/images/yv.png"
-import WoozeeeImg from "../assets/images/woozeee.png"
-import OntheGoImg from "../assets/images/go.png"
-import BillsPayImg from "../assets/images/billspay.png"
-import YouStoreImg from "../assets/images/youstore.png"
-import NetflixImg from "../assets/images/netflix-react.png"
-import VeergeImg from "../assets/images/veerge.png"
-import GrcdImg from "../assets/images/grcd.png"
-import ImageSearchImg from "../assets/images/image-search.png"
-import VideoSearchImg from "../assets/images/video-search.png"
-import CalculatorImg from "../assets/images/calculator.png"
-import LasslessImg from "../assets/images/lassless.png"
-import NexterImg from "../assets/images/nexter.png"
-import TrilloImg from "../assets/images/trillo.png"
-import NatourImg from "../assets/images/natours.png"
-import OmnifoodImg from "../assets/images/omnifood.png"
+import Fade from "react-reveal/Fade";
+import YvImg from "../assets/images/yv.png";
+import WoozeeeImg from "../assets/images/woozeee.png";
+import OntheGoImg from "../assets/images/go.png";
+import BillsPayImg from "../assets/images/billspay.png";
+import YouStoreImg from "../assets/images/youstore.png";
+import NetflixImg from "../assets/images/netflix-react.png";
+import VeergeImg from "../assets/images/veerge.png";
+import GrcdImg from "../assets/images/grcd.png";
+import ImageSearchImg from "../assets/images/image-search.png";
+import VideoSearchImg from "../assets/images/video-search.png";
+import CalculatorImg from "../assets/images/calculator.png";
+import LasslessImg from "../assets/images/lassless.png";
+import NexterImg from "../assets/images/nexter.png";
+import TrilloImg from "../assets/images/trillo.png";
+import NatourImg from "../assets/images/natours.png";
+import OmnifoodImg from "../assets/images/omnifood.png";
 
 function projects() {
   const projects = [
@@ -104,7 +104,7 @@ function projects() {
       code: "https://github.com/muideenjamiu01/lasless-figma-design",
     },
     {
-      img: NexterImg ,
+      img: NexterImg,
       title: "Nexter landing page",
       desc: "Quote search app. Used Quotable API for the quotes and React, Redux on the frontend",
       live: "https://nexter-homepage.netlify.app/",
@@ -131,6 +131,13 @@ function projects() {
       live: "https://omifoodclone.netlify.app/",
       code: "https://github.com/muideenjamiu01/OmniFood-sample-web",
     },
+    {
+      img: OmnifoodImg,
+      title: "Slack Clone",
+      desc: "Quote search app. Used Quotable API for the quotes and React, Redux on the frontend",
+      live: "https://slack-clone-7fa06.web.app/",
+      code: "https://github.com/muideenjamiu01/slack-clone",
+    },
   ];
 
   return (
@@ -151,40 +158,39 @@ function projects() {
       </div>
 
       <div className="projects container mx-auto grid md:grid-cols-3 gap-10">
-      <Fade left>
-        {projects.map((project, i) => {
-          return (
-            
-            <div className="relative" key={i}>
-              <img src={project.img} alt={project.title} />
-              <div className="flex absolute left-0 right-0 top-[13px] bottom-0 mx-auto w-[90%] h-[90%]  bg-primary  opacity-0 duration-500 justify-center flex-col hover:opacity-100 px-2 ">
-                <p className="px-5 py-2 bg-blue-500 hover:bg-blue-600 mr-5 font-bold rounded mx-auto container text-center ">{project.title}</p>
-                <p className="py-5 text-center font-bold px-2 text-white">
-                  {project.desc}
-                </p>
+        <Fade left>
+          {projects.map((project, i) => {
+            return (
+              <div className="relative" key={i}>
+                <img src={project.img} alt={project.title} />
+                <div className="flex absolute left-0 right-0 top-[13px] bottom-0 mx-auto w-[90%] h-[90%]  bg-primary  opacity-0 duration-500 justify-center flex-col hover:opacity-100 px-2 ">
+                  <p className="px-5 py-2 bg-blue-500 hover:bg-blue-600 mr-5 font-bold rounded mx-auto container text-center ">
+                    {project.title}
+                  </p>
+                  <p className="py-5 text-center font-bold px-2 text-white">
+                    {project.desc}
+                  </p>
 
-                <div className="mx-auto">
-                  <a
-                    href={project.live}
-                    className="px-5 py-2 bg-blue-500 hover:bg-blue-600 mr-5 font-bold"
-                  >
-                    Live
-                  </a>
-                  <a
-                    href={project.code}
-                    className="px-5 py-2 bg-blue-700 hover:bg-blue-800 font-bold"
-                  >
-                    Code
-                  </a>
+                  <div className="mx-auto">
+                    <a
+                      href={project.live}
+                      className="px-5 py-2 bg-blue-500 hover:bg-blue-600 mr-5 font-bold"
+                    >
+                      Live
+                    </a>
+                    <a
+                      href={project.code}
+                      className="px-5 py-2 bg-blue-700 hover:bg-blue-800 font-bold"
+                    >
+                      Code
+                    </a>
+                  </div>
                 </div>
               </div>
-            </div>
-            
-          );
-        })}
+            );
+          })}
         </Fade>
       </div>
-      
     </section>
   );
 }
