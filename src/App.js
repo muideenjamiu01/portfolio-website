@@ -1,24 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from "./components/Header";
+import Hero from "./components/Hero";
+import About from "./components/About";
+import Projects from "./components/Projects";
+import Blog from "./components/Blog";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
+import Sidebar from "./components/re-components/sidebar1";
+import SidebarTwo from "./components/re-components/SidebarTwo";
+import SelectMenu from "./components/re-components//SelectMenu";
+import { BrowserRouter } from "react-router-dom";
+import CountrySelected from "./components/re-components/CountrySelected";
+import UserProfileDropDown from "./components/re-components/UserProfileDropDown";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <BrowserRouter>
+        {/* <UserProfileDropDown /> */}
+        {/* <CountrySelected /> */}
+        {/* <SidebarTwo /> */}
+        {/* <SelectMenu /> */}
+        <Header />
+        <Hero />
+        <About />
+        <Projects />
+        {/* <Blog /> */}
+        <Contact />
+        <Footer />
+      </BrowserRouter>
+    </>
   );
 }
 
